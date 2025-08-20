@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoNavTask.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login"
+    Shell.NavBarIsVisible="False">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0.0" Color="#5D5FEF" />
+                <GradientStop Offset="1.0" Color="#3A3897" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <ScrollView>
+            <VerticalStackLayout
+                Padding="30,40"
+                Spacing="4"
+                VerticalOptions="Center">
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Image
+                        HeightRequest="90"
+                        Source="logo.png"
+                        VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <Label
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="28"
+                    HorizontalOptions="Center"
+                    Text="Welcome Back!"
+                    TextColor="White" />
+                <Label
+                    Margin="0,-10,0,20"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    Opacity="0.8"
+                    Text="Create your timing!"
+                    TextColor="White" />
+
+                <Label Text="Email" TextColor="#FFF" />
+                <Border
+                    Padding="16,0,0,0"
+                    BackgroundColor="#FFF"
+                    HeightRequest="50"
+                    StrokeShape="RoundRectangle 12">
+                    <Entry
+                        HeightRequest="65"
+                        Keyboard="Email"
+                        Placeholder="Enter your email"
+                        PlaceholderColor="Gray"
+                        TextColor="Black" />
+                </Border>
+
+                <Label
+                    Margin="0,15,0,0"
+                    Text="Password"
+                    TextColor="#FFF" />
+                <Border
+                    Padding="16,0,0,0"
+                    BackgroundColor="#FFF"
+                    HeightRequest="50"
+                    StrokeShape="RoundRectangle 12">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Entry
+                            x:Name="PasswordEntry"
+                            HeightRequest="65"
+                            IsPassword="True"
+                            Placeholder="Enter your password"
+                            PlaceholderColor="Gray"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                        <ImageButton
+                            Grid.Column="1"
+                            Margin="0,0,10,0"
+                            BackgroundColor="Transparent"
+                            Clicked="TogglePasswordVisibility"
+                            HeightRequest="24"
+                            Source="eye_slash.png"
+                            VerticalOptions="Center"
+                            WidthRequest="24" />
+                    </Grid>
+                </Border>
+
+                <Label
+                    Margin="0,5,0,0"
+                    HorizontalOptions="End"
+                    Text="Forgot Password?"
+                    TextColor="#80BAFF">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnForgotPasswordTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Button
+                    Margin="0,20,0,0"
+                    BackgroundColor="#2A2A72"
+                    Clicked="OnLoginClicked"
+                    CornerRadius="25"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    Text="TAKE ME IN"
+                    TextColor="White" />
+
+                <HorizontalStackLayout Margin="0,20,0,0" HorizontalOptions="Center" Spacing="5">
+                    <Label
+                        Opacity="0.8"
+                        Text="Don't have an account?"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Label
+                        Text="Register me"
+                        TextColor="#80BAFF"
+                        VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegisterTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+                <Grid
+                    Margin="0,80,0,20"
+                    ColumnDefinitions="*, Auto, *"
+                    ColumnSpacing="15"
+                    VerticalOptions="Center">
+                    <BoxView
+                        Grid.Column="0"
+                        HeightRequest="1"
+                        Opacity="0.5"
+                        Color="White" />
+                    <Label
+                        Grid.Column="1"
+                        Opacity="0.8"
+                        Text="OR"
+                        TextColor="White" />
+                    <BoxView
+                        Grid.Column="2"
+                        HeightRequest="1"
+                        Opacity="0.5"
+                        Color="White" />
+                </Grid>
+
+                <HorizontalStackLayout
+                    Margin="0,20,0,0"
+                    HorizontalOptions="Center"
+                    Spacing="20">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Clicked="OnGoogleLoginClicked"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        ImageSource="google_logo.png"
+                        Text="Google"
+                        TextColor="#FFF"
+                        WidthRequest="150" />
+                    <Button
+                        BackgroundColor="Transparent"
+                        Clicked="OnFacebookLoginClicked"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        ImageSource="facebook_logo.png"
+                        Text="Facebook"
+                        TextColor="#FFF"
+                        WidthRequest="150" />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

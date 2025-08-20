@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoNavTask.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Bem-vindo"
+    Shell.NavBarIsVisible="False">
+
+
+    <Grid RowDefinitions="*, Auto">
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0.0" Color="#5D5FEF" />
+                <GradientStop Offset="1.0" Color="#3A3897" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <VerticalStackLayout
+            Grid.Row="0"
+            Padding="40,0"
+            HorizontalOptions="Fill"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="250"
+                Source="banner.png" />
+
+            <Label
+                Margin="0,40,0,0"
+                FontFamily="Patua"
+                FontSize="30"
+                Text="Organize Your Tasks"
+                TextColor="#FFF" />
+
+            <Label
+                FontFamily="Pridi"
+                FontSize="20"
+                Text="Keep your tasks organized by category, priority, or due date."
+                TextColor="#FFF" />
+
+        </VerticalStackLayout>
+
+        <Button
+            Grid.Row="1"
+            Margin="0,0,0,40"
+            BackgroundColor="Transparent"
+            Clicked="OnNextButtonClicked"
+            FontFamily="Patua"
+            FontSize="24"
+            Text="Next"
+            TextColor="#FFF" />
+    </Grid>
+</ContentPage>
