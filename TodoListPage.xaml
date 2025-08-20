@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoNavTask.TodoListPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#191A4B"
+    Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto, Auto, *">
+
+        <Grid
+            Grid.Row="0"
+            Padding="15,20"
+            ColumnDefinitions="Auto, *, Auto">
+            <ImageButton
+                Grid.Column="0"
+                Clicked="OnHeaderIconClicked"
+                HeightRequest="24"
+                Source="darhboard.png" />
+
+            <HorizontalStackLayout
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                Spacing="8">
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="24"
+                    Source="check_icon.png" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="To-do"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Column="2" Spacing="15">
+                <ImageButton
+                    Clicked="OnHeaderIconClicked"
+                    HeightRequest="24"
+                    Source="search.png" />
+                <ImageButton Clicked="OnHeaderIconClicked" Source="calendar.png" HeightRequest="24"/>
+            </HorizontalStackLayout>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            Padding="20,15"
+            ColumnDefinitions="*, Auto">
+            <HorizontalStackLayout
+                Grid.Column="0"
+                Spacing="15"
+                VerticalOptions="Center">
+                <VerticalStackLayout Spacing="5">
+                    <Label
+                        FontAttributes="Bold"
+                        Text="All"
+                        TextColor="#FFF" />
+                    <BoxView
+                        HeightRequest="2"
+                        HorizontalOptions="Fill"
+                        Color="White" />
+                </VerticalStackLayout>
+
+                <BoxView
+                    BackgroundColor="White"
+                    HeightRequest="20"
+                    Opacity="0.5"
+                    VerticalOptions="Center"
+                    WidthRequest="1" />
+
+                <Label Text="Importance" TextColor="#FFF"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Column="1" Spacing="5">
+                <Label Text="On Going" TextColor="#FFF" />
+                <Image
+                    HeightRequest="12"
+                    Source="arrow_down_icon.png"
+                    VerticalOptions="Center" />
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFilterDropdownTapped" />
+                </HorizontalStackLayout.GestureRecognizers>
+            </HorizontalStackLayout>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <CollectionView x:Name="TasksCollectionView">
+                <CollectionView.EmptyView />
+            </CollectionView>
+
+            <Button
+                Margin="0,0,0,30"
+                Clicked="OnAddTaskClicked"
+                CornerRadius="28"
+                HorizontalOptions="Center"
+                Text="Add new task"
+                TextColor="White"
+                VerticalOptions="End">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Offset="0.1" Color="#7E82F7" />
+                        <GradientStop Offset="1.0" Color="#4A4E91" />
+                    </LinearGradientBrush>
+                </Button.Background>
+
+                <Button.Shadow>
+                    <Shadow
+                        Brush="#000"
+                        Opacity="0.4"
+                        Radius="30"
+                        Offset="10,15" />
+                </Button.Shadow>
+            </Button>
+        </Grid>
+
+    </Grid>
+</ContentPage>
