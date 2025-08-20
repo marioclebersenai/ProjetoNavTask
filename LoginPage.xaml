@@ -92,18 +92,13 @@
                     HorizontalOptions="End"
                     Text="Forgot Password?"
                     TextColor="#80BAFF">
-
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnForgotPasswordTapped" />
-                    </Label.GestureRecognizers>
                 </Label>
 
                 <Button
                     Margin="0,20,0,0"
                     BackgroundColor="#2A2A72"
-                    Clicked="OnLoginClicked"
                     CornerRadius="25"
-                    FontAttributes="Bold"
+                    FontAttributes="Bold" 
                     HeightRequest="50"
                     Text="TAKE ME IN"
                     TextColor="White" />
@@ -117,11 +112,8 @@
                     <Label
                         Text="Register me"
                         TextColor="#80BAFF"
-                        VerticalOptions="Center">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnRegisterTapped" />
-                        </Label.GestureRecognizers>
-                    </Label>
+                        VerticalOptions="Center"/>
+
                 </HorizontalStackLayout>
 
                 <Grid
@@ -152,7 +144,6 @@
                     Spacing="20">
                     <Button
                         BackgroundColor="Transparent"
-                        Clicked="OnGoogleLoginClicked"
                         CornerRadius="10"
                         HeightRequest="50"
                         ImageSource="google_logo.png"
@@ -161,7 +152,6 @@
                         WidthRequest="150" />
                     <Button
                         BackgroundColor="Transparent"
-                        Clicked="OnFacebookLoginClicked"
                         CornerRadius="10"
                         HeightRequest="50"
                         ImageSource="facebook_logo.png"

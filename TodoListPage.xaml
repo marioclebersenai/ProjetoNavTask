@@ -14,7 +14,6 @@
             ColumnDefinitions="Auto, *, Auto">
             <ImageButton
                 Grid.Column="0"
-                Clicked="OnHeaderIconClicked"
                 HeightRequest="24"
                 Source="darhboard.png" />
 
@@ -35,11 +34,8 @@
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Grid.Column="2" Spacing="15">
-                <ImageButton
-                    Clicked="OnHeaderIconClicked"
-                    HeightRequest="24"
-                    Source="search.png" />
-                <ImageButton Clicked="OnHeaderIconClicked" Source="calendar.png" HeightRequest="24"/>
+                <ImageButton HeightRequest="24" Source="search.png" />
+                <ImageButton HeightRequest="24" Source="calendar.png" />
             </HorizontalStackLayout>
         </Grid>
 
@@ -69,7 +65,7 @@
                     VerticalOptions="Center"
                     WidthRequest="1" />
 
-                <Label Text="Importance" TextColor="#FFF"/>
+                <Label Text="Importance" TextColor="#FFF" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout Grid.Column="1" Spacing="5">
@@ -78,9 +74,6 @@
                     HeightRequest="12"
                     Source="arrow_down_icon.png"
                     VerticalOptions="Center" />
-                <HorizontalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnFilterDropdownTapped" />
-                </HorizontalStackLayout.GestureRecognizers>
             </HorizontalStackLayout>
         </Grid>
 
@@ -91,7 +84,6 @@
 
             <Button
                 Margin="0,0,0,30"
-                Clicked="OnAddTaskClicked"
                 CornerRadius="28"
                 HorizontalOptions="Center"
                 Text="Add new task"
