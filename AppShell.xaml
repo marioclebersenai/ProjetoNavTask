@@ -12,6 +12,20 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <TabBar>
+        <Tab Title="To-do">
+            <ShellContent
+                Title="To-do"
+                ContentTemplate="{DataTemplate local:TodoListPage}"
+                Route="TodoListPage" />
+        </Tab>
+    </TabBar>
+
 
 
 </Shell>

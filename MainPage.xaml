@@ -50,6 +50,8 @@
             FontFamily="Patua"
             FontSize="24"
             Text="Next"
-            TextColor="#FFF" />
+            TextColor="#FFF"
+            Clicked="Button_Clicked"
+            />
     </Grid>
 </ContentPage>

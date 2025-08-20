@@ -87,6 +87,7 @@
                 CornerRadius="28"
                 HorizontalOptions="Center"
                 Text="Add new task"
+                Clicked="Button_Clicked"
                 TextColor="White"
                 VerticalOptions="End">
                 <Button.Background>

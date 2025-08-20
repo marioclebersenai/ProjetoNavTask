@@ -101,7 +101,9 @@
                     FontAttributes="Bold" 
                     HeightRequest="50"
                     Text="TAKE ME IN"
-                    TextColor="White" />
+                    TextColor="White"
+                    Clicked="Button_Clicked"
+                    />
 
                 <HorizontalStackLayout Margin="0,20,0,0" HorizontalOptions="Center" Spacing="5">
                     <Label

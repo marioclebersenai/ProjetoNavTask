@@ -184,7 +184,9 @@
                 BorderWidth="1"
                 CornerRadius="16"
                 HeightRequest="50"
-                Text="Cancel" />
+                Text="Cancel" 
+                Clicked="Button_Clicked"
+                />
             <Button
                 Grid.Column="1"
                 BackgroundColor="#5D5FEF"
